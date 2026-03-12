@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Control de Expedientes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Registro de Expedientes</h1>
+
+<form id="formExpediente">
+
+<input type="text" id="expediente" placeholder="Número de expediente" required>
+
+<input type="date" id="fechaEnvio" required>
+
+<select id="tipo">
+<option value="Incompetencia">Incompetencia</option>
+<option value="Apelación">Apelación</option>
+<option value="Amparo">Amparo</option>
+</select>
+
+<select id="documentos">
+<option value="Con documentos">Con documentos</option>
+<option value="Sin documentos">Sin documentos</option>
+</select>
+
+<input type="date" id="fechaReingreso">
+
+<button type="submit">Agregar expediente</button>
+
+</form>
+
+<h2>Lista de expedientes</h2>
+
+<table>
+
+<thead>
+<tr>
+<th>Expediente</th>
+<th>Fecha envío</th>
+<th>Tipo</th>
+<th>Documentos</th>
+<th>Fecha reingreso</th>
+</tr>
+</thead>
+
+<tbody id="tablaExpedientes"></tbody>
+
+</table>
+
+<script src="script.js"></script>
+
+</body>
+</html>
