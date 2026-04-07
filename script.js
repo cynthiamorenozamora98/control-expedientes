@@ -50,3 +50,17 @@ mostrarExpedientes();
 });
 
 mostrarExpedientes();
+const SUPABASE_URL = "TU_URL";
+const SUPABASE_KEY = "TU_API_KEY";
+
+const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+// Insertar datos
+async function guardarExpediente(data) {
+  await supabase.from('expedientes').insert([data]);
+}
+
+// Obtener datos en tiempo real
+async function cargarExpedientes() {
+  let { data } = await supabase.from('expedientes').select('*');
+  console.log(data);
