@@ -1,3 +1,7 @@
+const SUPABASE_URL = "AQUI_TU_URL";
+const SUPABASE_KEY = "AQUI_TU_API_KEY";
+
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 let expedientes = JSON.parse(localStorage.getItem("expedientes")) || [];
 
 const tabla = document.getElementById("tablaExpedientes");
